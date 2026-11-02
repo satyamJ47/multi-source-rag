@@ -8,7 +8,7 @@ class ExcelConnector(BaseConnector):
         df = pd.read_excel(self.source_path)
         chunks = []
 
-        print(df)
+        # print(df)
         for i, row in df.iterrows():
             sentence = ", ".join(f"{col.strip()}: {row[col]}" for col in df.columns)
             chunks.append(
