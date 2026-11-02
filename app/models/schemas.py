@@ -18,3 +18,8 @@ class QueryRequest(BaseModel):
 class QueryResponse(BaseModel):
     answer: str
     sources: list[Chunk]
+
+class QueryResult(BaseModel):
+    query: str                  # the generated SQL / Mongo query
+    rows: list[dict]            # real rows returned by the database
+    answer: str                 # LLM's natural-language answer
