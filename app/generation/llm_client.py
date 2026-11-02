@@ -22,9 +22,10 @@ class GroqClient(BaseLLMClient):
                 }
             ],
             model=self.model,
+            temperature=0
         )
-        print("--------Response----------")
-        print(response)
+        # print("--------Response----------")
+        # print(response)
         return response.choices[0].message.content
 
 _PROVIDERS = {
