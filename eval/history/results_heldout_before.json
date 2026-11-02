@@ -1,0 +1,89 @@
+[
+  {
+    "id": "H1",
+    "type": "ranking",
+    "question": "Who has the second lowest History marks?",
+    "sql": "SELECT \"name\"\nFROM (\n  SELECT \"name\", \"history\" FROM \"students__div_a\"\n  UNION ALL\n  SELECT \"name\", \"history\" FROM \"students__div_b\"\n) AS all_students\nWHERE \"history\" = (\n  SELECT \"history\" FROM (\n    SELECT DISTINCT \"history\" FROM (\n      SELECT \"history\" FROM \"students__div_a\"\n      UNION ALL\n      SELECT \"history\" FROM \"students__div_b\"\n    )\n  ) ORDER BY \"history\" ASC LIMIT 1 OFFSET 1\n)",
+    "rows": [
+      {
+        "name": "Brian"
+      },
+      {
+        "name": "Ian"
+      }
+    ],
+    "error": null,
+    "passed": true
+  },
+  {
+    "id": "H2",
+    "type": "ranking",
+    "question": "Who has the 5th highest Maths marks?",
+    "sql": "SELECT \"name\", \"maths\" FROM (SELECT \"name\", \"maths\", ROW_NUMBER() OVER (ORDER BY \"maths\" DESC) AS rn FROM (SELECT \"name\", \"maths\" FROM \"students__div_a\" UNION ALL SELECT \"name\", \"maths\" FROM \"students__div_b\")) WHERE rn = 5",
+    "rows": [
+      {
+        "name": "Chloe",
+        "maths": 88
+      }
+    ],
+    "error": null,
+    "passed": false
+  },
+  {
+    "id": "H3",
+    "type": "ranking",
+    "question": "Who are the bottom 2 students by Science?",
+    "sql": "SELECT \"name\", \"science\" FROM (\n  SELECT \"name\", \"science\" FROM \"students__div_a\"\n  UNION ALL\n  SELECT \"name\", \"science\" FROM \"students__div_b\"\n) ORDER BY \"science\" ASC LIMIT 2",
+    "rows": [
+      {
+        "name": "Alex",
+        "science": 70
+      },
+      {
+        "name": "Ian",
+        "science": 70
+      }
+    ],
+    "error": null,
+    "passed": true
+  },
+  {
+    "id": "H4",
+    "type": "aggregation",
+    "question": "How many students scored below 70 in History?",
+    "sql": "SELECT COUNT(*) FROM (SELECT \"history\" FROM \"students__div_a\" UNION ALL SELECT \"history\" FROM \"students__div_b\") AS t WHERE \"history\" < 70",
+    "rows": [
+      {
+        "COUNT(*)": 3
+      }
+    ],
+    "error": null,
+    "passed": true
+  },
+  {
+    "id": "H5",
+    "type": "ranking",
+    "question": "Who has the 5th highest English marks?",
+    "sql": "SELECT \"name\" FROM (\n  SELECT \"name\", \"english\" FROM \"students__div_a\"\n  UNION ALL\n  SELECT \"name\", \"english\" FROM \"students__div_b\"\n) ORDER BY \"english\" DESC LIMIT 1 OFFSET 4",
+    "rows": [
+      {
+        "name": "Brian"
+      }
+    ],
+    "error": null,
+    "passed": false
+  },
+  {
+    "id": "H6",
+    "type": "ranking",
+    "question": "Who has the highest Geography marks in Div B?",
+    "sql": "SELECT \"name\" FROM \"students__div_b\" ORDER BY \"geography\" DESC LIMIT 1",
+    "rows": [
+      {
+        "name": "Fiona"
+      }
+    ],
+    "error": null,
+    "passed": true
+  }
+]

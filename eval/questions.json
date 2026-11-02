@@ -1,0 +1,30 @@
+{
+  "dataset": "data/students.xlsx",
+  "notes": "Sheets 'Div A' and 'Div B', 5 students each, same columns. Questions that don't name a division mean both divisions combined.",
+  "questions": [
+    {"id": "L1", "type": "lookup", "question": "What are Chloe's marks in Maths?", "expected": [88]},
+    {"id": "L2", "type": "lookup", "question": "How many marks did Hannah get in Science?", "expected": [89]},
+    {"id": "L3", "type": "lookup", "question": "What is David's total?", "expected": [355]},
+    {"id": "L4", "type": "lookup", "question": "What are Julia's marks in Geography?", "expected": [86]},
+
+    {"id": "A1", "type": "aggregation", "question": "What is the average of Maths of Div A?", "expected": [83.8]},
+    {"id": "A2", "type": "aggregation", "question": "What is the average Science marks in Div B?", "expected": [83.0]},
+    {"id": "A3", "type": "aggregation", "question": "What is the average English marks across both divisions?", "expected": [83.2]},
+    {"id": "A4", "type": "aggregation", "question": "What is the sum of History marks in Div A?", "expected": [375]},
+    {"id": "A5", "type": "aggregation", "question": "How many students scored more than 90 in Maths?", "expected": [3], "notes": "Strictly more than 90. Julia scored exactly 90 and is not counted."},
+    {"id": "A6", "type": "aggregation", "question": "How many students are there in total?", "expected": [10]},
+    {"id": "A7", "type": "aggregation", "question": "What is the average total score across both divisions?", "expected": [405.9]},
+
+    {"id": "R1", "type": "ranking", "question": "Who is the topper of Maths?", "expected": ["Hannah"]},
+    {"id": "R2", "type": "ranking", "question": "Who has the highest total?", "expected": ["Hannah"]},
+    {"id": "R3", "type": "ranking", "question": "Who is 3rd highest in Science?", "expected": ["Hannah"], "notes": "Top Science scores are 93, 92, 89, so the 3rd highest is 89. No ties at the top, so rank by distinct score and rank by position agree."},
+    {"id": "R4", "type": "ranking", "question": "Who are the top 3 students by total?", "expected": ["Hannah", "Chloe", "Julia"], "notes": "Order matters: 457, 454, 441. Emma is 4th with 440."},
+    {"id": "R5", "type": "ranking", "question": "Who has the lowest Science marks?", "expected": ["Alex", "Ian"], "notes": "Tie at 70. Both must be returned."},
+    {"id": "R6", "type": "ranking", "question": "Who is the topper of Div A by total?", "expected": ["Chloe"]},
+    {"id": "R7", "type": "ranking", "question": "Who has the highest English marks?", "expected": ["Chloe"]},
+    {"id": "R8", "type": "ranking", "question": "Who has the second lowest total?", "expected": ["Alex", "David"], "notes": "Second lowest distinct total is 355 (after Ian's 350). Alex and David tie, so both must be returned."},
+
+    {"id": "U1", "type": "unanswerable", "question": "What is the weather in Pune?", "expected": ["CANNOT_ANSWER"]},
+    {"id": "U2", "type": "unanswerable", "question": "Who is the principal of the school?", "expected": ["CANNOT_ANSWER"]}
+  ]
+}

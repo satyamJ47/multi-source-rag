@@ -1,0 +1,15 @@
+{
+  "dataset": "data/students.xlsx",
+  "notes": "Held-out set. Do not tune prompts against these questions. Ties are intentional.",
+  "questions": [
+    {"id": "H1", "type": "ranking", "question": "Who has the second lowest History marks?", "expected": ["Brian", "Ian"], "notes": "Distinct ascending: 60, 65. Brian and Ian tie at 65."},
+    {"id": "H2", "type": "ranking", "question": "Who has the 5th highest Maths marks?", "expected": ["Chloe", "Fiona"], "notes": "Distinct descending: 95, 94, 92, 90, 88. Chloe and Fiona tie at 88."},
+    {"id": "H3", "type": "ranking", "question": "Who are the bottom 2 students by Science?", "expected": ["Alex", "Ian", "Brian"], "notes": "Both have 70, next is 78, so the tie falls inside the top 2."},
+    {"id": "H4", "type": "aggregation", "question": "How many students scored below 70 in History?", "expected": [3]},
+    {"id": "H5", "type": "ranking", "question": "Who has the 5th highest English marks?", "expected": ["Brian", "Julia"], "notes": "Distinct descending: 95, 91, 90, 88, 85. Brian and Julia tie at 85."},
+    {"id": "H6", "type": "ranking", "question": "Who has the highest Geography marks in Div B?", "expected": ["Fiona"]},
+    {"id": "H7", "type": "ranking", "question": "Who are the bottom 3 students by total?", "expected": ["Ian", "Alex", "David", "George"], "notes": "Totals 350, 355, 355. Exactly 3 students. A distinct-value reading wrongly adds George (388)."},
+    {"id": "H8", "type": "ranking", "question": "Who are the top 6 students by Maths?", "expected": ["Hannah", "Emma", "Brian", "Julia", "Fiona", "Chloe", "George"], "notes": "Fiona and Chloe tie at 88 inside the top 6. A distinct-value reading wrongly adds George (81)."},
+    {"id": "H9", "type": "ranking", "question": "Who are the bottom 2 students by History?", "expected": ["Alex", "Brian", "Ian"], "notes": "Policy: top/bottom N includes ALL students tied at the cut-off. Alex is 60, Brian and Ian tie at 65 for 2nd lowest."}
+]
+}
