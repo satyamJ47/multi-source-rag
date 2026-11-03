@@ -1,0 +1,243 @@
+[
+  {
+    "id": "H1",
+    "type": "ranking",
+    "question": "Who has the second lowest History marks?",
+    "expected": [
+      "Brian",
+      "Ian"
+    ],
+    "top_k": 10,
+    "answer": "The second lowest History marks are 65, achieved by **Ian** and **Brian**.",
+    "retrieved": [
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "H2",
+    "type": "ranking",
+    "question": "Who has the 5th highest Maths marks?",
+    "expected": [
+      "Chloe",
+      "Fiona"
+    ],
+    "top_k": 10,
+    "answer": "The 5th highest Maths score is 88, which is shared by **Chloe** and **Fiona**.",
+    "retrieved": [
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "H3",
+    "type": "ranking",
+    "question": "Who are the bottom 2 students by Science?",
+    "expected": [
+      "Alex",
+      "Ian",
+      "Brian"
+    ],
+    "top_k": 10,
+    "answer": "Ian and Alex",
+    "retrieved": [
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440"
+    ],
+    "lenient": false,
+    "strict": false,
+    "error": null
+  },
+  {
+    "id": "H4",
+    "type": "aggregation",
+    "question": "How many students scored below 70 in History?",
+    "expected": [
+      3
+    ],
+    "top_k": 10,
+    "answer": "There are **3** students who scored below 70 in History.",
+    "retrieved": [
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "H5",
+    "type": "ranking",
+    "question": "Who has the 5th highest English marks?",
+    "expected": [
+      "Brian",
+      "Julia"
+    ],
+    "top_k": 10,
+    "answer": "The 5th highest English score is 85, which is shared by **Julia** and **Brian**.",
+    "retrieved": [
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "H6",
+    "type": "ranking",
+    "question": "Who has the highest Geography marks in Div B?",
+    "expected": [
+      "Fiona"
+    ],
+    "top_k": 10,
+    "answer": "Fiona has the highest Geography marks in Div\u202fB.",
+    "retrieved": [
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "H7",
+    "type": "ranking",
+    "question": "Who are the bottom 3 students by total?",
+    "expected": [
+      "Ian",
+      "Alex",
+      "David",
+      "George"
+    ],
+    "top_k": 10,
+    "answer": "The three students with the lowest total scores are:\n\n1. **Ian** \u2013 Total\u202f=\u202f350  \n2. **Alex** \u2013 Total\u202f=\u202f355  \n3. **David** \u2013 Total\u202f=\u202f355",
+    "retrieved": [
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425"
+    ],
+    "lenient": false,
+    "strict": false,
+    "error": null
+  },
+  {
+    "id": "H8",
+    "type": "ranking",
+    "question": "Who are the top 6 students by Maths?",
+    "expected": [
+      "Hannah",
+      "Emma",
+      "Brian",
+      "Julia",
+      "Fiona",
+      "Chloe",
+      "George"
+    ],
+    "top_k": 10,
+    "answer": "Hannah, Emma, Brian, Julia, Chloe, and Fiona.",
+    "retrieved": [
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425"
+    ],
+    "lenient": false,
+    "strict": false,
+    "error": null
+  },
+  {
+    "id": "H9",
+    "type": "ranking",
+    "question": "Who are the bottom 2 students by History?",
+    "expected": [
+      "Alex",
+      "Brian",
+      "Ian"
+    ],
+    "top_k": 10,
+    "answer": "The two students with the lowest History scores are:\n\n1. **Alex** \u2013 60  \n2. **Ian** \u2013 65 (tied with Brian for the second\u2011lowest score)",
+    "retrieved": [
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  }
+]

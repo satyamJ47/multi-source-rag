@@ -1,0 +1,531 @@
+[
+  {
+    "id": "L1",
+    "type": "lookup",
+    "question": "What are Chloe's marks in Maths?",
+    "expected": [
+      88
+    ],
+    "top_k": 10,
+    "answer": "Chloe scored 88 in Maths.",
+    "retrieved": [
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "L2",
+    "type": "lookup",
+    "question": "How many marks did Hannah get in Science?",
+    "expected": [
+      89
+    ],
+    "top_k": 10,
+    "answer": "89",
+    "retrieved": [
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "L3",
+    "type": "lookup",
+    "question": "What is David's total?",
+    "expected": [
+      355
+    ],
+    "top_k": 10,
+    "answer": "David's total is **355**.",
+    "retrieved": [
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "L4",
+    "type": "lookup",
+    "question": "What are Julia's marks in Geography?",
+    "expected": [
+      86
+    ],
+    "top_k": 10,
+    "answer": "Julia scored 86 in Geography.",
+    "retrieved": [
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "A1",
+    "type": "aggregation",
+    "question": "What is the average of Maths of Div A?",
+    "expected": [
+      83.8
+    ],
+    "top_k": 10,
+    "answer": "The average Maths score for Div\u202fA is **83.8**.",
+    "retrieved": [
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "A2",
+    "type": "aggregation",
+    "question": "What is the average Science marks in Div B?",
+    "expected": [
+      83.0
+    ],
+    "top_k": 10,
+    "answer": "The average Science marks in Div\u202fB is **83**.",
+    "retrieved": [
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "A3",
+    "type": "aggregation",
+    "question": "What is the average English marks across both divisions?",
+    "expected": [
+      83.2
+    ],
+    "top_k": 10,
+    "answer": "The average English marks across both divisions is **83.2**.",
+    "retrieved": [
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "A4",
+    "type": "aggregation",
+    "question": "What is the sum of History marks in Div A?",
+    "expected": [
+      375
+    ],
+    "top_k": 10,
+    "answer": "The sum of History marks in Div\u202fA is **375**.",
+    "retrieved": [
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "A5",
+    "type": "aggregation",
+    "question": "How many students scored more than 90 in Maths?",
+    "expected": [
+      3
+    ],
+    "top_k": 10,
+    "answer": "3",
+    "retrieved": [
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "A6",
+    "type": "aggregation",
+    "question": "How many students are there in total?",
+    "expected": [
+      10
+    ],
+    "top_k": 10,
+    "answer": "There are 10 students in total.",
+    "retrieved": [
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "A7",
+    "type": "aggregation",
+    "question": "What is the average total score across both divisions?",
+    "expected": [
+      405.9
+    ],
+    "top_k": 10,
+    "answer": "The average total score across both divisions is **405.9**.",
+    "retrieved": [
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "R1",
+    "type": "ranking",
+    "question": "Who is the topper of Maths?",
+    "expected": [
+      "Hannah"
+    ],
+    "top_k": 10,
+    "answer": "Hannah",
+    "retrieved": [
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "R2",
+    "type": "ranking",
+    "question": "Who has the highest total?",
+    "expected": [
+      "Hannah"
+    ],
+    "top_k": 10,
+    "answer": "Hannah has the highest total.",
+    "retrieved": [
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "R3",
+    "type": "ranking",
+    "question": "Who is 3rd highest in Science?",
+    "expected": [
+      "Hannah"
+    ],
+    "top_k": 10,
+    "answer": "Hannah",
+    "retrieved": [
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "R4",
+    "type": "ranking",
+    "question": "Who are the top 3 students by total?",
+    "expected": [
+      "Hannah",
+      "Chloe",
+      "Julia"
+    ],
+    "top_k": 10,
+    "answer": "The top three students by total score are:\n\n1. **Hannah** \u2013 457  \n2. **Chloe** \u2013 454  \n3. **Julia** \u2013 441",
+    "retrieved": [
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "R5",
+    "type": "ranking",
+    "question": "Who has the lowest Science marks?",
+    "expected": [
+      "Alex",
+      "Ian"
+    ],
+    "top_k": 10,
+    "answer": "The lowest Science marks are 70, achieved by both **Ian** and **Alex**.",
+    "retrieved": [
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "R6",
+    "type": "ranking",
+    "question": "Who is the topper of Div A by total?",
+    "expected": [
+      "Chloe"
+    ],
+    "top_k": 10,
+    "answer": "Chloe is the topper of Div\u202fA by total.",
+    "retrieved": [
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "R7",
+    "type": "ranking",
+    "question": "Who has the highest English marks?",
+    "expected": [
+      "Chloe"
+    ],
+    "top_k": 10,
+    "answer": "Chloe has the highest English marks.",
+    "retrieved": [
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "R8",
+    "type": "ranking",
+    "question": "Who has the second lowest total?",
+    "expected": [
+      "Alex",
+      "David"
+    ],
+    "top_k": 10,
+    "answer": "The second lowest total is 355, achieved by both **David** and **Alex**.",
+    "retrieved": [
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "U1",
+    "type": "unanswerable",
+    "question": "What is the weather in Pune?",
+    "expected": [
+      "CANNOT_ANSWER"
+    ],
+    "top_k": 10,
+    "answer": "I don't have enough information.",
+    "retrieved": [
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454",
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  },
+  {
+    "id": "U2",
+    "type": "unanswerable",
+    "question": "Who is the principal of the school?",
+    "expected": [
+      "CANNOT_ANSWER"
+    ],
+    "top_k": 10,
+    "answer": "I don\u2019t have enough information to answer that.",
+    "retrieved": [
+      "sheet: Div B, Name: Hannah, English: 91, Maths: 95, Science: 89, History: 94, Geography: 88, Total: 457",
+      "sheet: Div B, Name: Julia, English: 85, Maths: 90, Science: 93, History: 87, Geography: 86, Total: 441",
+      "sheet: Div B, Name: George, English: 76, Maths: 81, Science: 84, History: 72, Geography: 75, Total: 388",
+      "sheet: Div A, Name: Brian, English: 85, Maths: 92, Science: 78, History: 65, Geography: 74, Total: 394",
+      "sheet: Div A, Name: Emma, English: 88, Maths: 94, Science: 85, History: 91, Geography: 82, Total: 440",
+      "sheet: Div A, Name: David, English: 72, Maths: 65, Science: 80, History: 70, Geography: 68, Total: 355",
+      "sheet: Div B, Name: Ian, English: 68, Maths: 74, Science: 70, History: 65, Geography: 73, Total: 350",
+      "sheet: Div B, Name: Fiona, English: 82, Maths: 88, Science: 79, History: 85, Geography: 91, Total: 425",
+      "sheet: Div A, Name: Alex, English: 90, Maths: 80, Science: 70, History: 60, Geography: 55, Total: 355",
+      "sheet: Div A, Name: Chloe, English: 95, Maths: 88, Science: 92, History: 89, Geography: 90, Total: 454"
+    ],
+    "lenient": true,
+    "strict": true,
+    "error": null
+  }
+]
