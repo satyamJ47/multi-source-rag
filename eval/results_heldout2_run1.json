@@ -1,0 +1,224 @@
+[
+  {
+    "id": "H1",
+    "type": "ranking",
+    "question": "Who has the second lowest History marks?",
+    "sql": "SELECT \"name\" FROM (\n  SELECT * FROM \"students__div_a\"\n  UNION ALL\n  SELECT * FROM \"students__div_b\"\n) AS t\nWHERE \"history\" = (\n  SELECT DISTINCT \"history\" FROM (\n    SELECT * FROM \"students__div_a\"\n    UNION ALL\n    SELECT * FROM \"students__div_b\"\n  ) AS t2\n  ORDER BY \"history\" ASC\n  LIMIT 1 OFFSET 1\n)",
+    "rows": [
+      {
+        "name": "Brian"
+      },
+      {
+        "name": "Ian"
+      }
+    ],
+    "error": null,
+    "passed": true
+  },
+  {
+    "id": "H2",
+    "type": "ranking",
+    "question": "Who has the 5th highest Maths marks?",
+    "sql": "SELECT \"name\", \"english\", \"maths\", \"science\", \"history\", \"geography\", \"total\"\nFROM (\n  SELECT * FROM \"students__div_a\"\n  UNION ALL\n  SELECT * FROM \"students__div_b\"\n) AS t\nWHERE \"maths\" = (\n  SELECT DISTINCT \"maths\" FROM (\n    SELECT \"maths\" FROM \"students__div_a\"\n    UNION ALL\n    SELECT \"maths\" FROM \"students__div_b\"\n  ) AS sub\n  ORDER BY \"maths\" DESC\n  LIMIT 1 OFFSET 4\n)",
+    "rows": [
+      {
+        "name": "Chloe",
+        "english": 95,
+        "maths": 88,
+        "science": 92,
+        "history": 89,
+        "geography": 90,
+        "total": 454
+      },
+      {
+        "name": "Fiona",
+        "english": 82,
+        "maths": 88,
+        "science": 79,
+        "history": 85,
+        "geography": 91,
+        "total": 425
+      }
+    ],
+    "error": null,
+    "passed": true
+  },
+  {
+    "id": "H3",
+    "type": "ranking",
+    "question": "Who are the bottom 2 students by Science?",
+    "sql": "WITH combined AS (\n  SELECT \"name\", \"science\" FROM \"students__div_a\"\n  UNION ALL\n  SELECT \"name\", \"science\" FROM \"students__div_b\"\n),\nbottom_science AS (\n  SELECT DISTINCT \"science\" FROM combined\n  ORDER BY \"science\" ASC\n  LIMIT 2\n)\nSELECT \"name\", \"science\"\nFROM combined\nWHERE \"science\" IN (SELECT \"science\" FROM bottom_science)\nORDER BY \"science\" ASC",
+    "rows": [
+      {
+        "name": "Alex",
+        "science": 70
+      },
+      {
+        "name": "Ian",
+        "science": 70
+      },
+      {
+        "name": "Brian",
+        "science": 78
+      }
+    ],
+    "error": null,
+    "passed": true
+  },
+  {
+    "id": "H4",
+    "type": "aggregation",
+    "question": "How many students scored below 70 in History?",
+    "sql": "SELECT COUNT(*) FROM (SELECT \"history\" FROM \"students__div_a\" UNION ALL SELECT \"history\" FROM \"students__div_b\") AS t WHERE \"history\" < 70",
+    "rows": [
+      {
+        "COUNT(*)": 3
+      }
+    ],
+    "error": null,
+    "passed": true
+  },
+  {
+    "id": "H5",
+    "type": "ranking",
+    "question": "Who has the 5th highest English marks?",
+    "sql": "SELECT \"name\", \"english\", \"maths\", \"science\", \"history\", \"geography\", \"total\"\nFROM (\n  SELECT * FROM \"students__div_a\"\n  UNION ALL\n  SELECT * FROM \"students__div_b\"\n) AS t\nWHERE \"english\" = (\n  SELECT DISTINCT \"english\" FROM (\n    SELECT \"english\" FROM \"students__div_a\"\n    UNION ALL\n    SELECT \"english\" FROM \"students__div_b\"\n  ) AS sub\n  ORDER BY \"english\" DESC\n  LIMIT 1 OFFSET 4\n)",
+    "rows": [
+      {
+        "name": "Brian",
+        "english": 85,
+        "maths": 92,
+        "science": 78,
+        "history": 65,
+        "geography": 74,
+        "total": 394
+      },
+      {
+        "name": "Julia",
+        "english": 85,
+        "maths": 90,
+        "science": 93,
+        "history": 87,
+        "geography": 86,
+        "total": 441
+      }
+    ],
+    "error": null,
+    "passed": true
+  },
+  {
+    "id": "H6",
+    "type": "ranking",
+    "question": "Who has the highest Geography marks in Div B?",
+    "sql": "SELECT \"name\", \"geography\" FROM \"students__div_b\" WHERE \"geography\" = (SELECT MAX(\"geography\") FROM \"students__div_b\")",
+    "rows": [
+      {
+        "name": "Fiona",
+        "geography": 91
+      }
+    ],
+    "error": null,
+    "passed": true
+  },
+  {
+    "id": "H7",
+    "type": "ranking",
+    "question": "Who are the bottom 3 students by total?",
+    "sql": "WITH \"all_students\" AS (\n  SELECT \"name\", \"total\" FROM \"students__div_a\"\n  UNION ALL\n  SELECT \"name\", \"total\" FROM \"students__div_b\"\n),\n\"bottom_totals\" AS (\n  SELECT DISTINCT \"total\" FROM \"all_students\"\n  ORDER BY \"total\" ASC\n  LIMIT 3\n)\nSELECT \"name\", \"total\"\nFROM \"all_students\"\nWHERE \"total\" IN (SELECT \"total\" FROM \"bottom_totals\")\nORDER BY \"total\" ASC",
+    "rows": [
+      {
+        "name": "Ian",
+        "total": 350
+      },
+      {
+        "name": "Alex",
+        "total": 355
+      },
+      {
+        "name": "David",
+        "total": 355
+      },
+      {
+        "name": "George",
+        "total": 388
+      }
+    ],
+    "error": null,
+    "passed": true
+  },
+  {
+    "id": "H8",
+    "type": "ranking",
+    "question": "Who are the top 6 students by Maths?",
+    "sql": "WITH t AS (\n  SELECT \"name\",\"maths\" FROM \"students__div_a\"\n  UNION ALL\n  SELECT \"name\",\"maths\" FROM \"students__div_b\"\n)\nSELECT \"name\",\"maths\"\nFROM t\nWHERE \"maths\" IN (\n  SELECT DISTINCT \"maths\"\n  FROM t\n  ORDER BY \"maths\" DESC\n  LIMIT 6\n)\nORDER BY \"maths\" DESC",
+    "rows": [
+      {
+        "name": "Hannah",
+        "maths": 95
+      },
+      {
+        "name": "Emma",
+        "maths": 94
+      },
+      {
+        "name": "Brian",
+        "maths": 92
+      },
+      {
+        "name": "Julia",
+        "maths": 90
+      },
+      {
+        "name": "Chloe",
+        "maths": 88
+      },
+      {
+        "name": "Fiona",
+        "maths": 88
+      },
+      {
+        "name": "George",
+        "maths": 81
+      }
+    ],
+    "error": null,
+    "passed": true
+  },
+  {
+    "id": "H9",
+    "type": "ranking",
+    "question": "Who are the bottom 2 students by History?",
+    "sql": "WITH low_hist AS (\n  SELECT DISTINCT \"history\"\n  FROM (\n    SELECT \"history\" FROM \"students__div_a\"\n    UNION ALL\n    SELECT \"history\" FROM \"students__div_b\"\n  )\n  ORDER BY \"history\" ASC\n  LIMIT 2\n)\nSELECT \"name\",\"english\",\"maths\",\"science\",\"history\",\"geography\",\"total\"\nFROM \"students__div_a\"\nWHERE \"history\" IN (SELECT \"history\" FROM low_hist)\nUNION ALL\nSELECT \"name\",\"english\",\"maths\",\"science\",\"history\",\"geography\",\"total\"\nFROM \"students__div_b\"\nWHERE \"history\" IN (SELECT \"history\" FROM low_hist)\nORDER BY \"history\" ASC",
+    "rows": [
+      {
+        "name": "Alex",
+        "english": 90,
+        "maths": 80,
+        "science": 70,
+        "history": 60,
+        "geography": 55,
+        "total": 355
+      },
+      {
+        "name": "Brian",
+        "english": 85,
+        "maths": 92,
+        "science": 78,
+        "history": 65,
+        "geography": 74,
+        "total": 394
+      },
+      {
+        "name": "Ian",
+        "english": 68,
+        "maths": 74,
+        "science": 70,
+        "history": 65,
+        "geography": 73,
+        "total": 350
+      }
+    ],
+    "error": null,
+    "passed": true
+  }
+]
